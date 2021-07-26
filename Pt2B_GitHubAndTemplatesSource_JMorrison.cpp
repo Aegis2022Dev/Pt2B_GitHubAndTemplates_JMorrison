@@ -52,6 +52,14 @@ int main()
     float X = 2.61; // a predefined positive float argument
     float Y = 7.16; // a predefined postive float argument
 
+    int arg1 = 3; // a predefined positive integer argument
+    float argZ1 = static_cast<float> (arg1); // forcibly convert argZ into float so resulting 
+                                             // non integer quotient will be accepted by round
+    int arg2 = 11;
+    float argZ2 = static_cast<float> (arg2); // a predefined positive integer argument
+
+    int arg3 = -3;
+    float argZ3 = static_cast<float> (arg3); // a predefined negative integer argument
 
     //call the template function for the 3 different variable type parameter cases
 
@@ -67,6 +75,12 @@ int main()
     cout << "\t" << "positive float type: " << X << " rounds down to  " << fixed << showpoint << setprecision(2) << half(X) << endl;
     cout << "\t" << "positive float type: " << Y << " rounds up to  " << fixed << showpoint << setprecision(2) << half(Y) << endl;
     cout << "\n\n";
+
+    cout << "\t" << "positive integer type:  " << arg1 << " rounds up to " << fixed << showpoint << setprecision(0) << half(argZ1) << endl;
+    cout << "\t" << "positive integer type: " << arg2 << " rounds up to " << fixed << showpoint << setprecision(0) << half(argZ2) << endl;
+    cout << "\t" << "negative integer type: " << arg3 << " rounds down to " << fixed << showpoint << setprecision(0) << half(argZ3) << endl;
+    cout << "\n\n";
+
 
 
     system("pause");
