@@ -28,17 +28,39 @@ using namespace std;
 
 //DECLARE FORWARD DECLARATIONS, METHOD & STRUCTURES DEFINITIONS FOR FUNCTION PROTOTYPES
 
+//The required half function
+
+template <typename T>
+T half(T number)
+{
+    T result;
+    result = round(number /2);
+
+    return result;
+}
+
 
 /****BEGIN main() METHOD****/
 
 int main()
 {
+    double negArgX1 = -6.6; // a predefined negative double argument  
+    double negArgX2 = -10.039364; // a predefined negative double argument
+    double posArgX1 = 6.6; // a predefined positive double argument
+    double posArgX2 = 7.039364; // a predefined positive double argument
 
+    //call the template function for the 3 different parameter cases
 
+    cout << "\nHalf values for \n\n";
+    //cout << fixed << showpoint;
+    //cout << setprecision(1);
+    cout << "\t" << "negative double type: " << negArgX2 << " rounds down to " << fixed << showpoint << setprecision(4) << half(negArgX2) << endl;
+    cout << "\t" << "negative double type: " << negArgX1 << " rounds up to " << fixed << showpoint << setprecision(4) << half(negArgX1) << endl;
+    cout << "\t" << "positive double type: " << posArgX1 << " rounds down to  " << fixed << showpoint << setprecision(4) << half(posArgX1) << endl;
+    cout << "\t" << "positive double type: " << posArgX2 << " rounds up to  " << fixed << showpoint << setprecision(4) << half(posArgX2) << endl;
+    cout << "\n\n";
 
     system("pause");
     return 0;
 
 }// End main()
-
-/****METHOD DEFINITIONS****/
