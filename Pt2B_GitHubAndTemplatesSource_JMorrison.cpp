@@ -49,7 +49,11 @@ int main()
     double posArgX1 = 6.6; // a predefined positive double argument
     double posArgX2 = 7.039364; // a predefined positive double argument
 
-    //call the template function for the 3 different parameter cases
+    float X = 2.61; // a predefined positive float argument
+    float Y = 7.16; // a predefined postive float argument
+
+
+    //call the template function for the 3 different variable type parameter cases
 
     cout << "\nHalf values for \n\n";
     //cout << fixed << showpoint;
@@ -59,6 +63,11 @@ int main()
     cout << "\t" << "positive double type: " << posArgX1 << " rounds down to  " << fixed << showpoint << setprecision(4) << half(posArgX1) << endl;
     cout << "\t" << "positive double type: " << posArgX2 << " rounds up to  " << fixed << showpoint << setprecision(4) << half(posArgX2) << endl;
     cout << "\n\n";
+
+    cout << "\t" << "positive float type: " << X << " rounds down to  " << fixed << showpoint << setprecision(2) << half(X) << endl;
+    cout << "\t" << "positive float type: " << Y << " rounds up to  " << fixed << showpoint << setprecision(2) << half(Y) << endl;
+    cout << "\n\n";
+
 
     system("pause");
     return 0;
